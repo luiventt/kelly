@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Mania - Sua Loja de Mangás</title>
+    <!-- Inclui o Tailwind CSS para estilização moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclui o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md p-6 rounded-b-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logotipo Fictício -->
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-book-open text-3xl text-[#FB6F92]"></i>
+                <h1 class="text-4xl font-extrabold text-[#5c3e46] tracking-wide">
+                    <span class="text-[#FB6F92]">Manga</span> Mania
+                </h1>
+            </div>
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul class="flex space-x-6 text-lg font-medium text-[#FF8FAB]">
+                    <li><a href="#inicio" class="hover:text-[#FB6F92] transition-colors duration-300">Início</a></li>
+                    <li><a href="#mangas" class="hover:text-[#FB6F92] transition-colors duration-300">Mangás</a></li>
+                    <li><a href="#contato" class="hover:text-[#FB6F92] transition-colors duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal (Hero) com Imagem Ilustrativa -->
+    <main id="inicio" class="container mx-auto my-12 p-6 bg-white rounded-2xl shadow-lg">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1627440337424-3453a0684242?q=80&w=1770&auto=format&fit=crop" 
+                     alt=""
+                     class="w-full h-auto object-cover rounded-xl shadow-xl">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-5xl font-bold text-[#5c3e46] leading-tight">
+                    Descubra seu próximo universo.
+                </h2>
+                <p class="mt-4 text-xl text-[#8b5b6b]">
+                    Explore nossa vasta coleção de mangás, de clássicos a lançamentos. Sua aventura começa aqui!
+                </p>
+                <button class="mt-8 px-8 py-4 bg-[#FB6F92] text-white font-bold rounded-full shadow-lg hover:bg-[#FF8FAB] transition-transform transform hover:scale-105">
+                    Ver Coleção
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Seção de Vídeo Ilustrativo -->
+    <section class="container mx-auto my-12 p-6 bg-white rounded-2xl shadow-lg">
+        <h3 class="text-center text-3xl font-bold mb-6 text-[#5c3e46]">Assista ao Nosso Mundo</h3>
+        <div class="relative w-full overflow-hidden rounded-xl shadow-xl">
+            <!-- Vídeo de demonstração -->
+            <video class="w-full" controls autoplay muted loop>
+                <source src="https://media.istockphoto.com/id/1342503133/pt/v%C3%ADdeo/the-artist-draws-anime-comics-on-paper-storyboard-for-the-cartoon-the-illustrator-creates.mp4?s=mp4-640x640-is&k=20&c=Xjc0SSYYbEV7WantthjVBvTAbkwAOSYz3hfasxtkzuQ=" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+        </div>
+        <p class="text-center text-sm mt-2 text-gray-500">Direitos do iStockphoto, sem a necessidade de atribuição ao autor</p>
+    </section>
+
+    <!-- Seção de Produtos (Mangás) -->
+    <section id="mangas" class="container mx-auto my-12 p-6 bg-white rounded-2xl shadow-lg">
+        <h3 class="text-center text-3xl font-bold mb-8 text-[#5c3e46]">Nossos Lançamentos</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Produto 1 -->
+            <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://m.media-amazon.com/images/I/810RyhfkR7L._UF1000,1000_QL80_.jpg" 
+                     alt="Capa de NANA Vol. 1" 
+                     class="w-full h-64 object-cover rounded-md mb-4">
+                <h4 class="text-xl font-bold text-[#5c3e46]">NANA Vol. 1</h4>
+                <p class="text-[#8b5b6b]">Ai Yazawa</p>
+                <p class="text-2xl font-bold text-[#FB6F92] mt-2">R$ 29,90</p>
+            </div>
+            <!-- Produto 2 -->
+            <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Paradise_Kiss_1.png" 
+                     alt="Capa de Paradise Kiss Vol. 1" 
+                     class="w-full h-64 object-cover rounded-md mb-4">
+                <h4 class="text-xl font-bold text-[#5c3e46]">Paradise Kiss Vol. 1</h4>
+                <p class="text-[#8b5b6b]">Ai Yazawa</p>
+                <p class="text-2xl font-bold text-[#FB6F92] mt-2">R$ 35,50</p>
+            </div>
+            <!-- Produto 3 -->
+            <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/5/55/Cardcaptor_Sakura.jpg" 
+                     alt="Capa de Sakura Card Captors Vol. 1" 
+                     class="w-full h-64 object-cover rounded-md mb-4">
+                <h4 class="text-xl font-bold text-[#5c3e46]">Sakura Card Captors Vol. 1</h4>
+                <p class="text-[#8b5b6b]">CLAMP</p>
+                <p class="text-2xl font-bold text-[#FB6F92] mt-2">R$ 31,90</p>
+            </div>
+            <!-- Produto 4 -->
+            <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://external-preview.redd.it/mMXuM2wFgkAzGLgsWs_KKVN1A9xtpldXfntE0HFg4xU.jpg?auto=webp&s=d56998a77831e8addb6f21a408816258dc342b8f" 
+                     alt="Capa de Saiki Kusuo no Psi-nan Vol. 1" 
+                     class="w-full h-64 object-cover rounded-md mb-4">
+                <h4 class="text-xl font-bold text-[#5c3e46]">Saiki Kusuo no Psi-nan Vol. 1</h4>
+                <p class="text-[#8b5b6b]">Shūichi Asō</p>
+                <p class="text-2xl font-bold text-[#FB6F92] mt-2">R$ 30,00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="bg-[#FB6F92] text-white py-8 px-4 text-center">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <!-- Fale Conosco -->
+            <div class="md:text-left md:w-1/2">
+                <h3 class="text-2xl font-bold mb-2">Fale Conosco</h3>
+                <p class="text-md">Para qualquer dúvida ou sugestão, entre em contato:</p>
+                <div class="flex justify-center md:justify-start mt-4 space-x-8">
+                    <a href="#" class="flex items-center space-x-2 text-white hover:text-gray-900 transition-colors duration-300">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                        <span>contato@mangamania.com</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 text-white hover:text-gray-900 transition-colors duration-300">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                        <span>(11) 99999-9999</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Direitos Autorais -->
+            <div class="md:text-right md:w-1/2">
+                <i class="fa-solid fa-store text-xl text-white mb-2"></i>
+                <p class="text-sm">&copy; 2025 Manga Mania. Todos os direitos reservados. Projeto Fictício para fins de estudo.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
