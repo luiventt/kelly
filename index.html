@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manga Mania - Sua Loja de Mangás</title>
-    <!-- Inclui o Tailwind CSS para estilização moderna -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inclui o Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
@@ -15,72 +13,100 @@
             background-color: #f7f7f7;
             color: #333;
         }
+        /* Estilo customizado para o input de pesquisa, ajustando as cores */
+        .search-input {
+            border-color: #FB6F92; 
+        }
+        .search-input:focus {
+            ring: 2px;
+            ring-color: #FB6F92;
+            box-shadow: 0 0 0 2px rgba(251, 111, 146, 0.5); /* Sombra para foco */
+        }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- Cabeçalho -->
-    <header class="bg-white shadow-md p-6 rounded-b-xl">
+    <header class="bg-white shadow-md py-2 px-6">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Logotipo Fictício -->
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-book-open text-3xl text-[#FB6F92]"></i>
-                <h1 class="text-4xl font-extrabold text-[#5c3e46] tracking-wide">
-                    <span class="text-[#FB6F92]">Manga</span> Mania
-                </h1>
+            
+            <div class="flex items-center">
+                <img src="img/1.png" alt="Manga Mania Logo" class="h-32 w-auto">
             </div>
-            <!-- Menu de Navegação -->
-            <nav>
-                <ul class="flex space-x-6 text-lg font-medium text-[#FF8FAB]">
-                    <li><a href="#inicio" class="hover:text-[#FB6F92] transition-colors duration-300">Início</a></li>
-                    <li><a href="#mangas" class="hover:text-[#FB6F92] transition-colors duration-300">Mangás</a></li>
-                    <li><a href="#contato" class="hover:text-[#FB6F92] transition-colors duration-300">Contato</a></li>
-                </ul>
-            </nav>
+
+            <div class="flex-1 max-w-lg mx-8">
+                <div class="relative flex items-center w-full">
+                    <input type="text" 
+                           placeholder="Pesquise por títulos, autores ou gêneros..." 
+                           class="search-input w-full py-3 pl-4 pr-12 border-2 border-gray-200 rounded-full focus:outline-none text-gray-700 transition-all duration-300">
+                    <button class="absolute right-0 top-0 mt-3 mr-4 text-[#FB6F92] hover:text-[#5c3e46] transition-colors">
+                        <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-6 text-xl text-[#5c3e46]">
+                <a href="#" class="hover:text-[#FB6F92] transition-colors"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="hover:text-[#FB6F92] transition-colors relative">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="absolute -top-2 -right-2 bg-[#FB6F92] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Seção Principal (Hero) com Imagem Ilustrativa -->
-    <main id="inicio" class="container mx-auto my-12 p-6 bg-white rounded-2xl shadow-lg">
-        <div class="flex flex-col md:flex-row items-center gap-8">
-            <div class="md:w-1/2">
-                <img src="https://www.blogdoselback.com.br/wp-content/uploads/2022/07/Manga-1-min.jpg" 
-                     alt=""
-                     class="w-full h-auto object-cover rounded-xl shadow-xl">
-                <p class="mt-2 text-xs text-center text-gray-500">Direitos reservados do Pixabay</p>
-            </div>
-            <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-5xl font-bold text-[#5c3e46] leading-tight">
+    <nav class="bg-[#FB6F92] shadow-lg">
+        <div class="container mx-auto flex justify-center py-2">
+            <ul class="flex space-x-12 text-lg font-bold text-white">
+                <li><a href="#inicio" class="py-2 px-4 hover:bg-[#FF8FAB] transition-colors duration-300 rounded-lg">Início</a></li>
+                <li><a href="#mangas" class="py-2 px-4 hover:bg-[#FF8FAB] transition-colors duration-300 rounded-lg">Mangás</a></li>
+                <li><a href="#" class="py-2 px-4 hover:bg-[#FF8FAB] transition-colors duration-300 rounded-lg">Pré-vendas</a></li>
+                <li><a href="#contato" class="py-2 px-4 hover:bg-[#FF8FAB] transition-colors duration-300 rounded-lg">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mx-auto my-12 flex flex-col lg:flex-row gap-8 px-6">
+        
+        <main id="inicio" 
+              class="w-full lg:w-1/2 p-8 rounded-2xl shadow-lg relative overflow-hidden flex items-center"
+              style="
+                background-image: url('https://www.blogdoselback.com.br/wp-content/uploads/2022/07/Manga-1-min.jpg'); 
+                background-size: cover; 
+                background-position: center;
+                min-height: 400px; /* Garante que a div tenha uma altura mínima para o background */
+              ">
+            
+            <div class="absolute inset-0 bg-black opacity-40 rounded-2xl"></div>
+
+            <div class="relative z-10 text-white text-center p-4">
+                <h2 class="text-4xl font-bold leading-tight">
                     Descubra seu próximo universo.
                 </h2>
-                <p class="mt-4 text-xl text-[#8b5b6b]">
+                <p class="mt-4 text-lg">
                     Explore nossa vasta coleção de mangás, de clássicos a lançamentos. Sua aventura começa aqui!
                 </p>
                 <button class="mt-8 px-8 py-4 bg-[#FB6F92] text-white font-bold rounded-full shadow-lg hover:bg-[#FF8FAB] transition-transform transform hover:scale-105">
                     Ver Coleção
                 </button>
             </div>
-        </div>
-    </main>
+            <p class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs text-gray-200 z-10">Direitos reservados do Pixabay</p>
+        </main>
 
-    <!-- Seção de Vídeo Ilustrativo -->
-    <section class="container mx-auto my-12 p-6 bg-white rounded-2xl shadow-lg">
-        <h3 class="text-center text-3xl font-bold mb-6 text-[#5c3e46]">Assista ao Nosso Mundo</h3>
-        <div class="relative w-full overflow-hidden rounded-xl shadow-xl">
-            <!-- Vídeo de demonstração -->
-            <video class="w-full" controls autoplay muted loop>
-                <source src="https://media.istockphoto.com/id/1342503133/pt/v%C3%ADdeo/the-artist-draws-anime-comics-on-paper-storyboard-for-the-cartoon-the-illustrator-creates.mp4?s=mp4-640x640-is&k=20&c=Xjc0SSYYbEV7WantthjVBvTAbkwAOSYz3hfasxtkzuQ=" type="video/mp4">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
-        </div>
-        <p class="text-center text-sm mt-2 text-gray-500">Direitos do iStockphoto, sem a necessidade de atribuição ao autor</p>
-    </section>
+        <section class="w-full lg:w-1/2 p-6 bg-white rounded-2xl shadow-lg flex flex-col justify-center">
+            <h3 class="text-center text-2xl font-bold mb-6 text-[#5c3e46]">Assista ao Nosso Mundo</h3>
+            <div class="relative w-full overflow-hidden rounded-xl shadow-xl">
+                <video class="w-full h-auto" controls autoplay muted loop>
+                    <source src="https://media.istockphoto.com/id/1342503133/pt/v%C3%ADdeo/the-artist-draws-anime-comics-on-paper-storyboard-for-the-cartoon-the-illustrator-creates.mp4?s=mp4-640x640-is&k=20&c=Xjc0SSYYbEV7WantthjVBvTAbkwAOSYz3hfasxtkzuQ=" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+            <p class="text-center text-sm mt-2 text-gray-500">Direitos do iStockphoto, sem a necessidade de atribuição ao autor</p>
+        </section>
 
-    <!-- Seção de Produtos (Mangás) -->
+    </div>
     <section id="mangas" class="container mx-auto my-12 p-6 bg-white rounded-2xl shadow-lg">
         <h3 class="text-center text-3xl font-bold mb-8 text-[#5c3e46]">Nossos Lançamentos</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <!-- Produto 1 -->
             <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
                 <img src="https://m.media-amazon.com/images/I/810RyhfkR7L._UF1000,1000_QL80_.jpg" 
                      alt="Capa de NANA Vol. 1" 
@@ -89,7 +115,6 @@
                 <p class="text-[#8b5b6b]">Ai Yazawa</p>
                 <p class="text-2xl font-bold text-[#FB6F92] mt-2">R$ 29,90</p>
             </div>
-            <!-- Produto 2 -->
             <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
                 <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Paradise_Kiss_1.png" 
                      alt="Capa de Paradise Kiss Vol. 1" 
@@ -98,7 +123,6 @@
                 <p class="text-[#8b5b6b]">Ai Yazawa</p>
                 <p class="text-2xl font-bold text-[#FB6F92] mt-2">R$ 35,50</p>
             </div>
-            <!-- Produto 3 -->
             <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
                 <img src="https://upload.wikimedia.org/wikipedia/pt/5/55/Cardcaptor_Sakura.jpg" 
                      alt="Capa de Sakura Card Captors Vol. 1" 
@@ -107,7 +131,6 @@
                 <p class="text-[#8b5b6b]">CLAMP</p>
                 <p class="text-2xl font-bold text-[#FB6F92] mt-2">R$ 31,90</p>
             </div>
-            <!-- Produto 4 -->
             <div class="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-xl transition-shadow duration-300">
                 <img src="https://external-preview.redd.it/mMXuM2wFgkAzGLgsWs_KKVN1A9xtpldXfntE0HFg4xU.jpg?auto=webp&s=d56998a77831e8addb6f21a408816258dc342b8f" 
                      alt="Capa de Saiki Kusuo no Psi-nan Vol. 1" 
@@ -119,10 +142,8 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer id="contato" class="bg-[#FB6F92] text-white py-8 px-4 text-center">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <!-- Fale Conosco -->
             <div class="md:text-left md:w-1/2">
                 <h3 class="text-2xl font-bold mb-2">Fale Conosco</h3>
                 <p class="text-md">Para qualquer dúvida ou sugestão, entre em contato:</p>
@@ -138,7 +159,6 @@
                 </div>
             </div>
             
-            <!-- Direitos Autorais -->
             <div class="md:text-right md:w-1/2">
                 <i class="fa-solid fa-store text-xl text-white mb-2"></i>
                 <p class="text-sm">&copy; 2025 Manga Mania. Todos os direitos reservados. Projeto Fictício para fins de estudo.</p>
